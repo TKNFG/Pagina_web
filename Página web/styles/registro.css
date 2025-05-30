@@ -1,0 +1,170 @@
+/* General */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Evita problemas con el tamaño */
+}
+
+body {
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background: url('../imagenes/fondoregistrogow.jpg.avif') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px; /* Espacio para evitar superposición con el header */
+    padding-bottom: 60px; /* Espacio para evitar superposición con el footer */
+}
+
+/* Header */
+header {
+    color: #fdfdfd;
+    text-align: center;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    position: fixed; 
+    top: 0;
+    z-index: 10; 
+}
+
+header img.gow-logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: auto;
+}
+
+.topnav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #333;
+}
+
+.topnav a {
+    color: #fdfdfd;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    transition: background-color 0.7s;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Contenedor del formulario */
+.container {
+    width: 100%;
+    max-width: 700px; /* Ajustado para mayor orden */
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 150px auto 50px; 
+}
+
+/* Formulario */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espacio entre los campos */
+}
+
+input, textarea, select {
+    padding: 15px; /* Más espacio interno */
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 8px; /* Espacio entre etiqueta y campo */
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+button:disabled {
+    background-color: #d6d6d6;
+    cursor: not-allowed;
+}
+
+/* Footer */
+footer {
+    background-color: #333333;
+    padding: 20px;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    position: fixed; 
+    bottom: 0;
+}
+
+/* Media Query para dispositivos de hasta 786px */
+@media (max-width: 786px) {
+    body {
+        padding-top: 50px;
+        padding-bottom: 40px;
+    }
+
+    header {
+        padding: 8px 0;
+    }
+
+    .topnav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .topnav a {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .container {
+        margin: 120px auto 30px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input, textarea, select {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}

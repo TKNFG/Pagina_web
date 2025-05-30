@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="./styles/registro.css">
+    <meta charset="utf-8">
+    <title>¡Regístrate!</title>
+</head>
+<body>
+    <header>
+        <img src="imagenes/GodOfWar.ico" alt="logo" class="gow-logo">
+        <nav class="topnav">
+            <a href="./index.html">Home</a>
+            <a href="./valhalla.html">GOW Valhalla</a>
+            <a href="./gowtres.html">GOW 3</a>
+            <a href="./registro.html">¡Regístrate!</a>
+        </nav>
+    </header>
+
+    <!-- Contenedor del formulario de registro reemplazado por section -->
+    <section class="container">
+        <form action="#" method="post" class="formulario">
+            <h1>Registro de Usuario</h1>
+            
+            <!-- Campo Nombre -->
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre">
+            
+            <!-- Campo Apellidos -->
+            <label for="apellidos">Apellidos</label>
+            <input type="text" id="apellidos" name="apellidos" required placeholder="Ingresa tus apellidos">
+            
+            <!-- Campo Correo -->
+            <label for="correo">Correo Electrónico</label>
+            <input type="email" id="correo" name="correo" required placeholder="Ingresa tu correo electrónico">
+            
+            <!-- Campo Teléfono -->
+            <label for="telefono">Número de Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" required placeholder="Ingresa tu número de teléfono" pattern="[0-9]{10}" title="El número de teléfono debe tener 10 dígitos">
+            
+            <!-- Campo Contraseña -->
+            <label for="contrasenia">Contraseña</label>
+            <input type="password" id="contrasenia" name="contrasenia" required placeholder="Crea una contraseña" minlength="6">
+            
+            <!-- Campo Opinión sobre el juego -->
+            <label for="opinion">¿Qué te parece el juego?</label>
+            <textarea id="opinion" name="opinion" rows="4" required placeholder="Escribe tu opinión"></textarea>
+            
+            <!-- Campo Mejora del juego -->
+            <label for="mejoras">Campos que podrían mejorar los desarrolladores del juego</label>
+            <textarea id="mejoras" name="mejoras" rows="4" required placeholder="Escribe tus sugerencias"></textarea>
+            
+            <!-- Campo ¿Comprarías el juego? -->
+            <label for="comprar">¿Comprarías el juego?</label>
+            <select id="comprar" name="comprar" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+            
+            <!-- Campo Descripción corta -->
+            <label for="descripcion">¿Cómo describirías el juego en pocas palabras?</label>
+            <input type="text" id="descripcion" name="descripcion" required placeholder="Describe el juego en pocas palabras">
+            
+            <!-- Campo Recomendación -->
+            <label for="recomendacion">¿Lo recomendarías?</label>
+            <select id="recomendacion" name="recomendacion" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+            
+            <!-- Botón de envío -->
+            <button type="submit">Registrar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Página desarrollada por Francisco Godoy Arenas.</p>
+    </footer>
+</body>
+</html>

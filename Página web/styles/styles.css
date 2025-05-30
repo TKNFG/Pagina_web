@@ -1,0 +1,397 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+ background-color: #000000;
+}
+
+header {
+  color: #fdfdfd;
+  text-align: center;
+  width: 100vw;
+}
+
+.topnav {
+  display: flex;
+  justify-content: center; 
+  gap: 20px; 
+  background-color: #333;
+  padding: 10px 0;
+}
+
+.topnav a {
+  color: #fdfdfd;
+  text-align: center;
+  text-decoration: none;
+  width: auto; 
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px; 
+  border-radius: 15px;
+  transition-duration: 0.7s;
+}
+
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.gow-logo{
+  position: absolute;
+  top: 10px; 
+  left: 10px; 
+  width: 40px; 
+  height: auto;
+}
+
+main 
+{
+height: 100vh;
+overflow-x: hidden;
+overflow-y: auto;
+perspective: 2px;
+}
+
+section 
+{
+transform-style: preserve-3d;
+position: relative;
+height: 110vh;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #FFF;
+font-family: 'Times New Roman', Times, serif;
+}
+
+section h1
+{
+text-align: center;
+font-size: 4rem;
+font-family: sans-serif;
+}
+
+.no-parallax 
+{
+background: url('../imagenes/fondoazabache.jpg') no-repeat center center/cover;
+position: relative;
+z-index: 0;
+padding: 50px 0;
+}
+
+.no-parallax h1,
+.no-parallax .cards-container {
+position: relative;
+z-index: 1;
+}
+
+.parallax h1 
+{
+width: 70%;
+font-size: 2rem;
+}
+
+.parallax::after 
+{
+content: " ";
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+transform: translateZ(-1px) scale(1.5);
+background-size: 100%;
+z-index: -1;
+}
+
+.bg::after 
+{
+background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../imagenes/GodOfWar.webp");
+background-size: cover;
+}
+
+/* Fondo con texto superpuesto */
+.background-container {
+position: relative;
+height: 130vh;
+background: url('../imagenes/fondogowact.jpg.webp') no-repeat center center/cover;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+padding: 0 50px;
+margin-top: -240px; 
+}
+
+.text-container {
+background-color: rgba(0, 0, 0, 0.6);
+color: white;
+padding: 20px 30px;
+max-width: 40%;
+border-radius: 10px;
+}
+
+.text-container h1 {
+font-size: 1.8rem;
+margin-bottom: 20px;
+}
+
+.text-container p {
+font-size: 1rem;
+line-height: 1.5;
+margin-bottom: 15px;
+}
+
+/*Estilos para el carrusel*/
+.carousel-wrapper {
+height: 95vh; 
+position: relative;
+width: 100vw; 
+margin: 0 auto; 
+}
+
+.carousel-title {
+text-align: center;
+font-size: 24px;
+color: #fff; 
+margin-bottom: 20px;
+position: relative; 
+z-index: 10; 
+}
+
+.carousel-wrapper{
+height:100vh;
+position:relative;
+width:100vw;
+margin:0 auto;
+}
+.carousel-item{
+position:absolute;
+top:0;
+bottom:0;
+left:0;
+right:0;
+padding:25px 50px;
+opacity:0;
+transition: all 0.5s ease-in-out;
+}
+
+.carousel-wrapper{
+height:500px;
+position:relative;
+width:900px;
+margin:0 auto;
+}
+.carousel-item{
+position:absolute;
+top:0;
+bottom:0;
+left:0;
+right:0;
+padding:25px 50px;
+opacity:0;
+transition: all 0.5s ease-in-out;
+}
+.arrow{
+border: solid rgb(255, 255, 255);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 12px;
+}
+
+.arrow-prev{
+left:-30px;
+position:absolute;
+top:50%;
+transform:translateY(-50%) rotate(135deg);
+}
+
+.arrow-next{
+  right:-30px;
+position:absolute;
+top:50%;
+transform:translateY(-50%) rotate(-45deg);
+}
+
+.light{
+color:white;
+}
+
+[id^="item"] {
+  display: none;
+}
+
+.item-1 {
+  z-index: 2;
+  opacity: 1;
+background:url('../imagenes/god-of-war-ragnarok-watermark-screenshot-03-en-08sep21.webp');
+background-size:cover;
+}
+.item-2{
+background:url('../imagenes/god-of-war-ragnarok-watermark-screenshot-11-en-08sep21.webp');
+ background-size:cover;
+}
+.item-3{
+background:url('../imagenes/god-of-war-ragnarok-watermark-screenshot-12-en-08sep21.webp');
+ background-size:cover;
+}
+
+*:target ~ .item-1 {
+  opacity: 0;
+}
+
+#item-1:target ~ .item-1 {
+  opacity: 1;
+}
+
+#item-2:target ~ .item-2, #item-3:target ~ .item-3 {
+  z-index: 3;
+  opacity: 1;
+}
+
+.cards-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 30px;
+padding: 20px;
+}
+
+.card {
+background-color: #1e1e1e;
+border-radius: 8px;
+max-width: 300px;
+padding: 20px;
+text-align: center;
+color: #fff;
+box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+transition: transform 0.3s;
+overflow: hidden; /* Previene contenido sobresaliente */
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.card:hover {
+transform: translateY(-10px);
+}
+
+.card img {
+width: 100%; 
+max-width: 100%; 
+height: auto; 
+border-radius: 8px;
+object-fit: cover; /* Ajusta el contenido al contenedor */
+overflow: hidden; /* Esconde cualquier contenido que sobresalga */
+}
+
+.card h2 {
+font-size: 22px;
+margin-bottom: 10px;
+}
+
+.card p {
+font-size: 14px;
+line-height: 1.5;
+}
+
+/*Pié de página*/
+footer {
+  background-color: #333333;
+  padding: 20px;
+  clear: both;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  header {
+      font-size: 1.2rem;
+      padding: 15px;
+  }
+
+  .topnav {
+      flex-direction: column; /* Cambia a columna */
+      gap: 10px;
+      padding: 10px;
+  }
+
+  .topnav a {
+      height: auto; /* Ajusta la altura */
+      padding: 10px 20px;
+      font-size: 1rem;
+  }
+
+  .gow-logo {
+      top: 5px;
+      left: 5px;
+      width: 30px;
+  }
+
+  section h1 {
+      font-size: 2.5rem;
+  }
+
+  .background-container {
+      flex-direction: column; /* Apila el contenido verticalmente */
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+  }
+
+  .text-container {
+      max-width: 90%; 
+      padding: 15px;
+  }
+
+  .carousel-wrapper {
+      height: 70vh; 
+      width: 100%;
+  }
+
+  .carousel-item {
+      padding: 20px;
+      background-size: contain; /* Asegura que la imagen no se recorte */
+      background-repeat: no-repeat;
+      background-position: center;
+  }
+
+  .cards-container {
+      gap: 20px;
+      padding: 10px;
+  }
+
+  .card {
+      max-width: 90%; 
+      padding: 15px;
+  }
+
+  .card img {
+      width: 100%; 
+      height: auto; 
+  }
+
+  .no-parallax {
+      background-size: cover;
+      height: auto; /* Ajusta altura según contenido */
+      padding: 20px 0;
+  }
+
+  .item-1,
+  .item-2,
+  .item-3 {
+      background-size: contain; /
+      background-position: center;
+      height: 60vh; 
+  }
+
+  footer {
+      font-size: 0.9rem;
+      text-align: center; 
+  }
+}
+
+
